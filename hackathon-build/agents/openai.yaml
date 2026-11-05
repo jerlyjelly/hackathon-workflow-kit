@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hackathon Build"
+  short_description: "Coordinate timed builds from unfamiliar briefs and data"
+  default_prompt: "Use $hackathon-build and adopt its Contest preferences as my project instructions to implement this round through verified deliverables."

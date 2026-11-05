@@ -9,13 +9,37 @@ The workflow uses GPT-6.1 Sol throughout. It coordinates Superpowers for enginee
 Paste this into the coding agent:
 
 ```text
-Set up and run the workflow from https://github.com/jerlyjelly/hackathon-workflow-kit.
-Read BOOTSTRAP.md and follow it. Adopt hackathon-build's workflow and Contest preferences as my project instructions.
-Inspect this environment, install missing required skills using compatible methods, verify their availability, and begin with the supplied brief and data.
-Use only GPT-6.1 Sol for every worker and reviewer. I will relay domain-chatbot questions and answers. Ask for consequential information you cannot determine from the supplied material, and continue independent work while waiting.
+Set up and run my hackathon workflow from:
+https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.2.0
+
+Read BOOTSTRAP.md, INSTALL.md, and dependencies.json from that version.
+Inspect the actual environment and existing project instructions.
+Install missing hackathon-build, Superpowers, and Stageshow resources
+using the documented installation path and fallback. Preserve existing
+files and verify what is installed, discoverable, and usable.
+Do not use Context7.
+
+Adopt hackathon-build's workflow and Contest preferences as my project
+instructions. Use only GPT-6.1 Sol for every worker and reviewer.
+Use one lead and two scoped scouts when supported. Workers should
+follow their assignments without repeating project setup or planning.
+
+Find and read the supplied brief, data documentation, datasets, output
+specifications, and submission rules. Establish the deadline and
+submission directory from the supplied material, asking me if missing.
+I will relay domain-chatbot questions and answers.
+
+After scouting and initial clarification, explicitly define and justify
+decision factors, metrics, priorities, and tradeoffs before choosing an
+algorithm. Ask about missing mandatory business facts, continue
+independent work, and make documented choices where the brief delegates
+engineering judgment. Do not ask for routine phase-by-phase approval.
+
+Keep AGENTS.md, PRD.md, and PROGRESS.md current. Carry the task through
+a working application, independent verification, and required deliverables.
 ```
 
-For a repeatable setup, use a tag or commit instead of the moving default branch. Start with [BOOTSTRAP.md](BOOTSTRAP.md), then use [PROMPTS.md](PROMPTS.md) for launch details and later steering.
+The prompt selects `v0.2.0`; its dependency manifest pins newly downloaded supporting skills. Start with [BOOTSTRAP.md](BOOTSTRAP.md) and [INSTALL.md](INSTALL.md), then use [PROMPTS.md](PROMPTS.md) for launch details and later steering. Reuse existing working installations with their revision differences recorded.
 
 ## Flow
 
@@ -32,6 +56,8 @@ For a repeatable setup, use a tag or commit instead of the moving default branch
 | File | Purpose |
 | --- | --- |
 | [BOOTSTRAP.md](BOOTSTRAP.md) | Environment inspection and dependency installation |
+| [INSTALL.md](INSTALL.md) | Preferred installation path, fallback, and concrete checks |
+| [dependencies.json](dependencies.json) | Pinned source revisions and required files |
 | [PROMPTS.md](PROMPTS.md) | Launch, resume, clarification, and deadline prompts |
 | [hackathon-build/SKILL.md](hackathon-build/SKILL.md) | Main workflow |
 | [skill-routing.md](hackathon-build/references/skill-routing.md) | Which Superpowers skills to use and when |
@@ -51,4 +77,4 @@ The required third-party skills are installed from their own repositories. Their
 
 ## Validation status
 
-The skill structure and local document links have been checked. An earlier draft received an independent scenario review covering ambiguous data, changed requirements, context loss, and a failing export near the deadline. The package has not yet completed a full timed application-building rehearsal. Repository updates should be rehearsed before competition use.
+The skill structure and local document links have been checked. An earlier draft received an independent scenario review covering ambiguous data, changed requirements, context loss, and a failing export near the deadline. Version 0.2.0 incorporates a source review of installation, worker roles, workflow boundaries, and decision criteria. Pinned source revisions and required files have been checked. A live VM rehearsal was stopped before the agent ran; this package has not completed an end-to-end installation or timed application-building rehearsal.

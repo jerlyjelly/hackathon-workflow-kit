@@ -2,15 +2,17 @@
 
 Install Superpowers as a package if desired, but load skills as their jobs become relevant. Resolve names against the installed version. This file describes integration choices; read the actual skill before using it. Apply the user's adopted contest preferences when its default process differs.
 
+The lead owns phase order, contracts, task ownership, and execution mode. Workers follow their assigned mode rather than starting the whole workflow. A generated Superpowers plan must preserve that choice; replace default template language that would require a competing execution workflow. Do not invoke both execution modes as successive mandatory phases.
+
 | Skill | Use in this workflow |
 | --- | --- |
 | `using-superpowers` | Package discovery/bootstrap. Do not ask the user to invoke it at every phase. |
 | `brainstorming` | After initial scouting, clarify and justify decision factors, metrics, priorities, and tradeoffs before choosing an algorithm. Revisit them for consequential requirement changes. Adopted contest preferences replace repeated design approval gates. |
 | `dispatching-parallel-agents` | Independent requirements/data discovery, separate investigations, and implementation with stable interfaces and disjoint ownership. Parallel calls do not make dependent work independent. |
-| `writing-plans` | A short, dependency-aware plan after criteria and algorithm rationale are recorded. Reference PRD as the specification and PROGRESS as current task state. |
+| `writing-plans` | A dependency-aware plan after criteria and algorithm rationale are recorded. Reference PRD as the specification and PROGRESS as current task state. Preserve the lead's chosen execution mode rather than copying a mandatory nested-executor header. |
 | `test-driven-development` | Core rules, validation, output contracts, consequential state changes, and regressions. Apply contest exceptions for visual-only work, generated scaffolding, and configuration. |
 | `systematic-debugging` | Reproduce unexpected behavior and find its cause before patching. Preserve failures as evidence. |
-| `requesting-code-review` | Independent review of coherent milestones and before delivery. Include source requirements, the criteria and rationale, exact diff/revision or file set, tests, and limitations. Check business-objective alignment as well as code correctness. In a new repository without a base commit, review current files explicitly; do not invent a base SHA. |
+| `requesting-code-review` | Independent review of coherent milestones and before delivery. Include source requirements, the criteria and rationale, contract revision, exact diff/revision or file set, tests, and limitations. Check business-objective alignment as well as code correctness. In a new repository without a base commit, review current files explicitly; do not invent a base SHA. |
 | `receiving-code-review` | Check findings against requirements and actual behavior before changing code. Resolve uncertainty for dependent changes while continuing unrelated work. |
 | `verification-before-completion` | Before marking requirements verified or reporting completion. Evidence must apply to integrated code and current inputs. |
 
@@ -34,7 +36,7 @@ The default is one lead coordinating a few meaningful workstreams. Installing th
 
 ## Sources
 
-Routing was checked against public source files on 2026-11-03. Recheck the installed version when behavior differs.
+Routing was reviewed against public source files on 2026-11-05. The package dependency manifest records revisions for new installations. Recheck the installed version when behavior differs.
 
 - [Superpowers skills](https://github.com/obra/superpowers/tree/main/skills)
 - [User-instruction precedence](https://github.com/obra/superpowers/blob/main/skills/using-superpowers/SKILL.md)

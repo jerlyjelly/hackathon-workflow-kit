@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "recorded_on": "2026-11-05",
+  "validation": "Source revisions and required file paths checked; not an end-to-end installation test.",
+  "required": [
+    {
+      "name": "superpowers",
+      "repository": "https://github.com/obra/superpowers",
+      "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+      "retain": "complete_repository",
+      "skill_roots": "skills/*/SKILL.md",
+      "required_files": [
+        "skills/using-superpowers/SKILL.md",
+        "skills/using-superpowers/references/codex-tools.md",
+        "skills/brainstorming/SKILL.md",
+        "skills/dispatching-parallel-agents/SKILL.md",
+        "skills/writing-plans/SKILL.md",
+        "skills/test-driven-development/SKILL.md",
+        "skills/systematic-debugging/SKILL.md",
+        "skills/requesting-code-review/SKILL.md",
+        "skills/receiving-code-review/SKILL.md",
+        "skills/verification-before-completion/SKILL.md"
+      ]
+    },
+    {
+      "name": "stageshow",
+      "repository": "https://github.com/benjitaylor/skills",
+      "revision": "299140fafd08df55a9c234e610c3f64af3f45531",
+      "retain": "complete_skill_directory",
+      "skill_directory": "stageshow",
+      "required_files": [
+        "stageshow/SKILL.md",
+        "stageshow/references/craft.md",
+        "stageshow/references/kit.md",
+        "stageshow/kit/index.ts"
+      ]
+    }
+  ]
+}

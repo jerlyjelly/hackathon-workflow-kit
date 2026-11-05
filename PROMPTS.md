@@ -5,10 +5,34 @@ For a new VM, start with [BOOTSTRAP.md](BOOTSTRAP.md) to inspect the environment
 ## Setup and start in a new VM
 
 ```text
-Set up and run the workflow from https://github.com/jerlyjelly/hackathon-workflow-kit.
-Read BOOTSTRAP.md and follow it. Adopt hackathon-build's workflow and Contest preferences as my project instructions.
-Inspect this environment, install missing required skills using compatible methods, verify their availability, and begin with the supplied brief and data.
-Use only GPT-6.1 Sol for every worker and reviewer. I will relay domain-chatbot questions and answers. Ask for consequential information you cannot determine from the supplied material, and continue independent work while waiting.
+Set up and run my hackathon workflow from:
+https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.2.0
+
+Read BOOTSTRAP.md, INSTALL.md, and dependencies.json from that version.
+Inspect the actual environment and existing project instructions.
+Install missing hackathon-build, Superpowers, and Stageshow resources
+using the documented installation path and fallback. Preserve existing
+files and verify what is installed, discoverable, and usable.
+Do not use Context7.
+
+Adopt hackathon-build's workflow and Contest preferences as my project
+instructions. Use only GPT-6.1 Sol for every worker and reviewer.
+Use one lead and two scoped scouts when supported. Workers should
+follow their assignments without repeating project setup or planning.
+
+Find and read the supplied brief, data documentation, datasets, output
+specifications, and submission rules. Establish the deadline and
+submission directory from the supplied material, asking me if missing.
+I will relay domain-chatbot questions and answers.
+
+After scouting and initial clarification, explicitly define and justify
+decision factors, metrics, priorities, and tradeoffs before choosing an
+algorithm. Ask about missing mandatory business facts, continue
+independent work, and make documented choices where the brief delegates
+engineering judgment. Do not ask for routine phase-by-phase approval.
+
+Keep AGENTS.md, PRD.md, and PROGRESS.md current. Carry the task through
+a working application, independent verification, and required deliverables.
 ```
 
 Use the setup prompt above for a new environment, or the launch prompt below when setup is complete. The agent should move through phases itself. The other prompts are recovery or steering controls, not mandatory steps to paste sequentially. Replace brace-delimited fields with the current round's information. If unknown, say `unknown` rather than guessing.
@@ -24,7 +48,7 @@ Deadline: {date, time, timezone}
 Submission directory: {path}
 Domain chatbot: I will relay your questions and its answers.
 
-Use only GPT-6.1 Sol, including every worker and reviewer. Start with one lead and two scouts when supported. Use Superpowers selectively and Stageshow for the visual guide. Do not use Context7. Preserve source materials and required submission evidence. Keep AGENTS.md, PRD.md, and PROGRESS.md current, reusing existing equivalents.
+Use only GPT-6.1 Sol, including every worker and reviewer. Start with one lead and two scoped scouts when supported. Workers follow their assignments without repeating project setup or planning. Use Superpowers selectively and Stageshow for the visual guide. Do not use Context7. Preserve source materials and required submission evidence. Keep AGENTS.md, PRD.md, and PROGRESS.md current, reusing existing equivalents.
 
 Begin by inspecting supplied material, profiling data, and independently checking requirements. After scouting and initial clarification, explicitly define and justify decision factors, metrics, priorities, and tradeoffs before choosing an algorithm. Then carry the task through a working application, verification, and required deliverables.
 ```
@@ -54,4 +78,4 @@ Continue $hackathon-build in delivery mode. Remaining time: {duration}. Freeze o
 
 ## Before installation
 
-Replace `$hackathon-build` with `the workflow in /absolute/path/to/hackathon-build/SKILL.md`. Reading a draft explicitly works without changing global configuration. Superpowers and Stageshow must still be available.
+Replace `$hackathon-build` with `the workflow in /absolute/path/to/hackathon-build/SKILL.md`. Read complete supporting resources from their canonical paths. Explicit reading does not prove client discovery or executable tool availability; record those separately.

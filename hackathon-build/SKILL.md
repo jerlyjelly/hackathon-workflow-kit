@@ -21,6 +21,17 @@ The lead follows the stages below, owns shared decisions and state, and integrat
 4. All model-backed work, including reviewers and nested tools, must use GPT-6.1 Sol. Check effective model choices before dispatch; do not use a tool that silently calls another model. If compliant delegation is unavailable, work inline and report the limitation. Prefer higher supported effort for formulation and difficult diagnosis; routine implementation can use less.
 5. On resume, read current state files and relevant source requirements before editing. Inspect the repository and necessary checks. Do not restart discovery or trust old passing results after relevant code, input, or settings changed.
 
+## Git version control
+
+Use Git for the application throughout the round. This is separate from downloading skill repositories.
+
+- Reuse the application's existing repository and preserve its history and unrelated changes. If none exists, initialize one in the actual application workspace. Inspect repository boundaries before doing so; do not mistake the workflow/dependency checkout for the application repository.
+- Before implementation, inspect the existing changes and create a baseline commit of appropriate task files. Stage deliberately. Keep secrets, local credentials, caches, and generated dependencies out of commits; choose ignore rules without hiding required submission artifacts. Preserve supplied data regardless of whether it belongs in Git.
+- Commit working milestones and verified fixes with descriptive messages. Create a checkpoint before a substantial algorithm change or refactor so a known working version is recoverable. Record relevant commit IDs and associated verification evidence in PROGRESS.md; a commit alone does not prove correctness.
+- In a shared working tree, the lead owns staging, commits, and other Git mutations. Workers report their changes without manipulating the shared index or committing other workers' edits. Isolated worktree commits are permitted when explicitly assigned by the lead and integrated into the submission tree.
+- Inspect status and diffs before committing. Do not discard unrelated work or rewrite existing history to recover from a failed attempt. Use an existing author identity; if absent, ask once for a repository-local identity while continuing independent work. Do not invent contributor identities or change global Git configuration.
+- Local version control does not authorize creating a remote repository or pushing the competition project. Follow explicit publication and submission instructions.
+
 ## Durable state
 
 Reuse the user's established equivalents. Otherwise keep:
@@ -82,6 +93,8 @@ Use `writing-plans` for a concise plan with meaningful, independently checkable 
 
 Get real input through validation, core computation, required persistence, user-facing output, and the specified export/submission interface. Verify this path before substantial optional improvements.
 
+For web applications, bind the user-accessible frontend, backend, and preview servers to `0.0.0.0`, unless explicit platform instructions require a different binding. This is the listening address, not a port. Use the port specified by the environment or brief; if none is specified, choose an available port and document it. Make host/port configuration consistent across start commands, environment settings, and containers when used. Do not silently move off a required port if it is occupied. Use the actual preview/public URL for browser links and client API configuration, rather than advertising `0.0.0.0` as a destination. Keep unrelated internal services scoped to their actual requirements.
+
 With three agents, the lead owns core/backend integration, one worker owns functional UI, and one owns independent verification. Adjust this division to actual bottlenecks and available concurrency. The lead controls contracts and integration. Parallelize only work with stable interfaces and disjoint write ownership. Each worker gets source requirements, requirement IDs, current contract revision, allowed files/resources, execution mode, and expected checks. Assign ownership of shared manifests, lockfiles, migrations, generated outputs, test databases, and service ports as well as source files. Before integration, check that results use the current contract and rerun checks affected by later changes. Workers do not launch another project orchestrator.
 
 Use Stageshow for the visual guide and relevant examples. Connect actual controls to application behavior. Bound UI polish by the assignment's priorities. For Korean copy, use functional labels, consistent terminology, and concise explanations; preserve facts and uncertainty. Read [UI guidance](references/ui-guidance.md) when frontend work starts.
@@ -98,6 +111,8 @@ Use an independent checker for strict outputs where feasible. Feed it deliberate
 
 Run the application and use browser tools for representative workflows and rendered screenshots. Use `systematic-debugging` for failures. Review substantive milestones for spec compliance and correctness, reproduce findings, and integrate fixes. Rerun affected checks after changes; run final required checks on the integrated state.
 
+For web servers, inspect the actual listening address and port, test a local HTTP response, and check the environment's preview or forwarded URL when available. A successful localhost request alone does not establish external reachability. Record separately any forwarding or external-access check that cannot be performed.
+
 ## 7. Finish against the current brief
 
 Near the deadline, prioritize missing mandatory behavior, invalid outputs, and failed integration over optional optimization or cosmetic work. Time pressure never turns unverified work into a passing result.
@@ -105,6 +120,8 @@ Near the deadline, prioritize missing mandatory behavior, invalid outputs, and f
 Start diagnosis of a known mandatory failure immediately; do not wait for a final-review ceremony. A reviewer can check unaffected requirements concurrently with the owner's fix when scopes are independent. Keep required checks, and explicitly report any coverage that the deadline prevents.
 
 Use `verification-before-completion`. Check the required startup path, persistence/container behavior when required, real output format, UI flows, and submission contents. Keep source briefs, plans, context files, and required history. Ensure worker changes and dependencies are in the submitted directory. Write required documentation from actual implementation and evidence. Report unresolved defects and untested areas precisely.
+
+Inspect Git status and the final diff, commit completed application work and documentation, and account for any intentionally untracked or unfinished files. Record the final commit and verification state. Document the server bind address, port configuration, and actual access URL in the run instructions.
 
 ## Contest preferences
 

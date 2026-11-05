@@ -10,7 +10,7 @@ Paste this into the coding agent:
 
 ```text
 Set up and run my hackathon workflow from:
-https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.2.0
+https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.3.0
 
 Read BOOTSTRAP.md, INSTALL.md, and dependencies.json from that version.
 Inspect the actual environment and existing project instructions.
@@ -35,11 +35,18 @@ algorithm. Ask about missing mandatory business facts, continue
 independent work, and make documented choices where the brief delegates
 engineering judgment. Do not ask for routine phase-by-phase approval.
 
+Use Git for local application version control, with a baseline commit
+and commits for working milestones and verified fixes. The lead owns
+Git mutations when workers share a working tree.
+Bind user-accessible web servers to 0.0.0.0 on the environment-required
+ports unless explicit platform instructions differ. Verify the actual
+listening address and document the real access URL.
+
 Keep AGENTS.md, PRD.md, and PROGRESS.md current. Carry the task through
 a working application, independent verification, and required deliverables.
 ```
 
-The prompt selects `v0.2.0`; its dependency manifest pins newly downloaded supporting skills. Start with [BOOTSTRAP.md](BOOTSTRAP.md) and [INSTALL.md](INSTALL.md), then use [PROMPTS.md](PROMPTS.md) for launch details and later steering. Reuse existing working installations with their revision differences recorded.
+The prompt selects `v0.3.0`; its dependency manifest pins newly downloaded supporting skills. Start with [BOOTSTRAP.md](BOOTSTRAP.md) and [INSTALL.md](INSTALL.md), then use [PROMPTS.md](PROMPTS.md) for launch details and later steering. Reuse existing working installations with their revision differences recorded.
 
 ## Flow
 
@@ -50,6 +57,8 @@ The prompt selects `v0.2.0`; its dependency manifest pins newly downloaded suppo
 5. Build a complete path through real input, processing, UI, and required outputs.
 6. Verify mandatory behavior and solution quality independently.
 7. Deliver the integrated work and required evidence.
+
+Use local Git throughout implementation, including a baseline and working milestone commits. Bind user-accessible web servers to `0.0.0.0` on the environment-required ports unless explicit platform instructions differ, and verify the listening configuration and actual access URL.
 
 ## Package
 
@@ -77,4 +86,4 @@ The required third-party skills are installed from their own repositories. Their
 
 ## Validation status
 
-The skill structure and local document links have been checked. An earlier draft received an independent scenario review covering ambiguous data, changed requirements, context loss, and a failing export near the deadline. Version 0.2.0 incorporates a source review of installation, worker roles, workflow boundaries, and decision criteria. Pinned source revisions and required files have been checked. A live VM rehearsal was stopped before the agent ran; this package has not completed an end-to-end installation or timed application-building rehearsal.
+The skill structure and local document links have been checked. An earlier draft received an independent scenario review covering ambiguous data, changed requirements, context loss, and a failing export near the deadline. Version 0.2.0 incorporated a source review of installation, worker roles, workflow boundaries, and decision criteria. Version 0.3.0 adds explicit application Git checkpoints and web-server binding/access checks. Pinned source revisions and required files have been checked. A live VM rehearsal was stopped before the agent ran; this package has not completed an end-to-end installation or timed application-building rehearsal.

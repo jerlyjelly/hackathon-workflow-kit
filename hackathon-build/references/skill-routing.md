@@ -4,6 +4,8 @@ Install Superpowers as a package if desired, but load skills as their jobs becom
 
 The lead owns phase order, contracts, task ownership, and execution mode. Workers follow their assigned mode rather than starting the whole workflow. A generated Superpowers plan must preserve that choice; replace default template language that would require a competing execution workflow. Do not invoke both execution modes as successive mandatory phases.
 
+Git version control is required even when worktrees and branch-finishing skills are unnecessary. In a shared working tree, the lead performs commit steps from supporting skills after reviewing the scoped changes; workers do not independently mutate the shared index. Use the main skill's baseline and milestone commit rules.
+
 | Skill | Use in this workflow |
 | --- | --- |
 | `using-superpowers` | Package discovery/bootstrap. Do not ask the user to invoke it at every phase. |

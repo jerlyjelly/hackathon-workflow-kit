@@ -9,6 +9,8 @@ Use this procedure when the user asks to install and run this workflow. The user
 - Check available runtimes, package managers, Git/download utilities, skill/plugin installation support, browser tools, and subagent capabilities once. Read the actual client's help or official documentation for unfamiliar commands; do not assume commands from another client are supported. Record the result and do not repeat successful setup investigation without a new failure.
 - Confirm the active model and permitted worker configuration through available settings/tools. Every model-backed role must use GPT-6.1 Sol. Do not silently substitute a model or infer that a tool uses Sol merely from its name. If worker configuration cannot be verified, use the compliant main session inline and report the limitation.
 - Determine the deadline, application workspace, submission directory, and domain-chatbot access from the brief. Ask for consequential missing facts while continuing independent setup. The default is that the user relays chatbot questions and answers.
+- Determine the application's Git repository boundary and existing status. Reuse it or initialize a repository in the actual application workspace, then create an appropriate baseline before implementation. Follow SKILL.md's Git rules; downloading this kit is not application version control.
+- For a web task, identify the required service ports and preview/forwarding mechanism. Plan to bind user-accessible web servers to `0.0.0.0` on the required ports, unless the platform explicitly specifies another binding. Record this configuration before launching servers.
 
 ## 2. Install the workflow and required skills
 

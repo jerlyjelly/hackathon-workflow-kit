@@ -6,7 +6,7 @@ For a new VM, start with [BOOTSTRAP.md](BOOTSTRAP.md) to inspect the environment
 
 ```text
 Set up and run my hackathon workflow from:
-https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.2.0
+https://github.com/jerlyjelly/hackathon-workflow-kit/tree/v0.3.0
 
 Read BOOTSTRAP.md, INSTALL.md, and dependencies.json from that version.
 Inspect the actual environment and existing project instructions.
@@ -31,6 +31,13 @@ algorithm. Ask about missing mandatory business facts, continue
 independent work, and make documented choices where the brief delegates
 engineering judgment. Do not ask for routine phase-by-phase approval.
 
+Use Git for local application version control, with a baseline commit
+and commits for working milestones and verified fixes. The lead owns
+Git mutations when workers share a working tree.
+Bind user-accessible web servers to 0.0.0.0 on the environment-required
+ports unless explicit platform instructions differ. Verify the actual
+listening address and document the real access URL.
+
 Keep AGENTS.md, PRD.md, and PROGRESS.md current. Carry the task through
 a working application, independent verification, and required deliverables.
 ```
@@ -51,6 +58,8 @@ Domain chatbot: I will relay your questions and its answers.
 Use only GPT-6.1 Sol, including every worker and reviewer. Start with one lead and two scoped scouts when supported. Workers follow their assignments without repeating project setup or planning. Use Superpowers selectively and Stageshow for the visual guide. Do not use Context7. Preserve source materials and required submission evidence. Keep AGENTS.md, PRD.md, and PROGRESS.md current, reusing existing equivalents.
 
 Begin by inspecting supplied material, profiling data, and independently checking requirements. After scouting and initial clarification, explicitly define and justify decision factors, metrics, priorities, and tradeoffs before choosing an algorithm. Then carry the task through a working application, verification, and required deliverables.
+
+Use local Git with a baseline and milestone commits, coordinated by the lead in a shared working tree. Bind user-accessible web servers to 0.0.0.0 on the required ports unless the platform explicitly requires another binding. Verify the listening configuration and actual access URL.
 ```
 
 For permitted direct chatbot interaction, replace the relay sentence with the authorized interface and interaction scope. The default prompt does not authorize messaging through unrelated services.
